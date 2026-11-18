@@ -1,3 +1,8 @@
-# Etapa 1 (ROJO): la función todavía no existe, por eso las pruebas fallan.
+# Etapa 2 (VERDE): el código mínimo para que todas las pruebas pasen.
 def es_primo(numero):
-    raise NotImplementedError("Aún no implementada")
+    if numero < 2:
+        return False
+    for divisor in range(2, numero):
+        if numero % divisor == 0:
+            return False
+    return True
